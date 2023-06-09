@@ -27,8 +27,9 @@ export default function home() {
             <div className="w-1/2 flex flex-col items-center self-center">
               <AnimatedText
                 text={
-                  "Muhammad Hafid Afandi,Student And Backend Web Developer."
+                  "Muhammad Hafid Afandi, Student And Backend Web Developer."
                 }
+                className="!text-5xl"
               />
               <p className="my-4 text-base font-medium">
                 Saya adalah seorang mahasiswa dan Backend Web Developer. Saya

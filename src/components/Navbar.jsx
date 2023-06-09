@@ -31,7 +31,7 @@ export default function Navbar() {
     <header className="w-full px-32 py-8 font-medium flex justify-between items-center">
       <nav className="">
         <CustomLink href="/" className="mr-4" title="Home" />
-        <CustomLink href="" className="m-4" title="About" />
+        <CustomLink href="/about" className="m-4" title="About" />
         <CustomLink href="" className="m-4" title="Project" />
         <CustomLink href="" className="ml-4" title="Article" />
       </nav>
