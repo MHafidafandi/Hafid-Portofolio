@@ -32,7 +32,7 @@ export default function Navbar() {
       <nav className="">
         <CustomLink href="/" className="mr-4" title="Home" />
         <CustomLink href="/about" className="m-4" title="About" />
-        <CustomLink href="" className="m-4" title="Project" />
+        <CustomLink href="/project" className="m-4" title="Project" />
         <CustomLink href="" className="ml-4" title="Article" />
       </nav>
 
@@ -46,7 +46,7 @@ export default function Navbar() {
           <AiFillTwitterCircle />
         </motion.a>
         <motion.a
-          href=""
+          href="https://github.com/MHafidafandi"
           target="_blank"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
@@ -54,7 +54,7 @@ export default function Navbar() {
           <AiFillGithub />
         </motion.a>
         <motion.a
-          href=""
+          href="https://www.linkedin.com/in/m-hafid-afandi-23b725245/"
           target="_blank"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
@@ -70,7 +70,7 @@ export default function Navbar() {
           <AiFillInstagram />
         </motion.a>
         <motion.a
-          href=""
+          href="https://www.instagram.com/mhafid_a/"
           target="_blank"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
