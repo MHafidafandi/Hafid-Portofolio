@@ -21,6 +21,8 @@ export default function home() {
               <Image
                 src={Avatar}
                 alt=""
+                priority
+                sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw,50vw"
                 className="w-96 h-auto overflow-hidden rounded-2xl shadow-xl border-8 border-stone-200 grayscale hover:grayscale-0 transition ease-in-out duration-300"
               />
             </div>

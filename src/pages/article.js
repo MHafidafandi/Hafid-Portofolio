@@ -39,7 +39,8 @@ const MovingImage = ({ title, img, link }) => {
         ref={imgRef}
         src={img}
         alt={title}
-        priority={false}
+        priority
+        sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw,50vw"
         className="w-96 h-auto hidden absolute rounded-lg z-10"
         whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
         initial={{ opacity: 0 }}
