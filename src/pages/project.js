@@ -9,15 +9,24 @@ import feturedProject from "../../public/featuredProject.jpg";
 import { motion } from "framer-motion";
 import project1 from "../../public/portofolioTailwind.png";
 
+const FramerImage = motion(Image);
+
 const FeturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full relative flex justify-between items-center gap-10 rounded-3xl border border-solid border-black bg-white shadow-2xl overflow-hidden p-12">
+    <article className="w-full relative flex justify-between items-center gap-10 rounded-3xl border border-solid border-black bg-white shadow-2xl overflow-hidden p-12 ">
+      <div className="absolute -z-10 top-10 -right-3 w-[101%] h-[103%] rounded-[2.5rem] bg-black" />
       <Link
         href={link}
         target="_blank"
         className="w-1/2 rounded-lg cursor-pointer overflow-hidden"
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </Link>
       <div className="w-1/2 flex flex-col justify-between items-start">
         <span className="text-orange-500 font-medium text-xl">{type}</span>
@@ -42,7 +51,6 @@ const FeturedProject = ({ type, title, summary, img, link, github }) => {
           </Link>
         </div>
       </div>
-      <div className="absolute -z-10 top-0 -right-3 w-[101%] h-[103%] rounded-[2.5rem] bg-black rounded-br-3xl" />
     </article>
   );
 };
@@ -56,7 +64,13 @@ const Project = ({ type, title, img, link, github }) => {
         target="_blank"
         className="w-full rounded-lg cursor-pointer overflow-hidden"
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </Link>
       <div className="w-full flex flex-col justify-between items-start mt-4">
         <span className="text-orange-500 font-medium text-xl">{type}</span>

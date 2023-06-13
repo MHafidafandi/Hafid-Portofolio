@@ -33,7 +33,7 @@ export default function Navbar() {
         <CustomLink href="/" className="mr-4" title="Home" />
         <CustomLink href="/about" className="m-4" title="About" />
         <CustomLink href="/project" className="m-4" title="Project" />
-        <CustomLink href="" className="ml-4" title="Article" />
+        <CustomLink href="/article" className="ml-4" title="Article" />
       </nav>
 
       <nav className="flex items-center gap-7 text-3xl">
