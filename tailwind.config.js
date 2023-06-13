@@ -5,6 +5,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -17,7 +18,9 @@ module.exports = {
       },
       backgroundImage: {
         circularLight:
-          "repeating-radial-gradient(rgba(0,0,0,0.4)2px,#ffffff 5px,#ffffff 100px)",
+          "repeating-radial-gradient(rgba(0,0,0,0.4)2px,#ffffff 5px,#ffffff 100px);",
+        circularDark:
+          "repeating-radial-gradient(rgba(255,255,255,0.4)2px,#000000 8px,#000000 100px);",
       },
     },
   },

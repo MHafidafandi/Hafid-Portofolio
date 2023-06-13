@@ -7,8 +7,9 @@ import {
   AiFillLinkedin,
   AiFillTwitterCircle,
 } from "react-icons/ai";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsSun } from "react-icons/bs";
 import { motion } from "framer-motion";
+import useThemeSwitcher from "@/hooks/useThemeSwitcher";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -16,7 +17,7 @@ const CustomLink = ({ href, title, className = "" }) => {
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
-        className={`h-[1px] inline-block bg-black absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+        className={`h-[1px] inline-block bg-black absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-white ${
           router.asPath === href ? "w-full" : "w-0"
         }`}
       >
@@ -27,8 +28,10 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 export default function Navbar() {
+  const [mode, setMode] = useThemeSwitcher();
+
   return (
-    <header className="w-full px-32 py-8 font-medium flex justify-between items-center">
+    <header className="w-full px-32 py-8 font-medium flex justify-between items-center dark:text-white">
       <nav className="">
         <CustomLink href="/" className="mr-4" title="Home" />
         <CustomLink href="/about" className="m-4" title="About" />
@@ -62,21 +65,20 @@ export default function Navbar() {
           <AiFillLinkedin />
         </motion.a>
         <motion.a
-          href=""
+          href="https://www.instagram.com/mhafid_a/"
           target="_blank"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >
           <AiFillInstagram />
         </motion.a>
-        <motion.a
-          href="https://www.instagram.com/mhafid_a/"
-          target="_blank"
+        <motion.button
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
+          onClick={() => setMode(mode === "dark" ? "light" : "dark")}
         >
-          <BsFillMoonStarsFill />
-        </motion.a>
+          {mode === "dark" ? <BsSun /> : <BsFillMoonStarsFill />}
+        </motion.button>
       </nav>
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">

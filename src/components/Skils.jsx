@@ -4,7 +4,7 @@ import React from "react";
 const Skill = ({ name, x, y }) => {
   return (
     <motion.div
-      className="flex items-center justify-center rounded-full font-semibold bg-black text-white py-3 px-6 shadow-black cursor-pointer absolute"
+      className="flex items-center justify-center rounded-full font-semibold bg-black text-white py-3 px-6 shadow-black cursor-pointer absolute dark:bg-white dark:text-black"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
       whileInView={{ x, y }}
@@ -20,9 +20,9 @@ const Skils = () => {
   return (
     <>
       <h2 className="font-bold text-center text-8xl w-full mt-64">Skills</h2>
-      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight">
+      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark">
         <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-black text-white p-8 shadow-black cursor-pointer"
+          className="flex items-center justify-center rounded-full font-semibold bg-black text-white p-8 shadow-black cursor-pointer dark:bg-white dark:text-black"
           whileHover={{ scale: 1.05 }}
         >
           WEB

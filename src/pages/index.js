@@ -14,7 +14,7 @@ export default function home() {
       <Head>
         <title>Portofolio</title>
       </Head>
-      <main className="flex items-center min-h-screen w-full">
+      <main className="flex items-center min-h-screen w-full dark:text-white">
         <Layout className="pt-0">
           <div className="flex justify-between items-center w-full">
             <div className="w-1/2 flex justify-center">
@@ -42,7 +42,7 @@ export default function home() {
                 <Link
                   href={"/dummy.pdf"}
                   target={"_blank"}
-                  className="flex items-center gap-2 bg-black text-white p-2.5 px-6 text-lg rounded-lg font-semibold border-2 border-solid border-transparent hover:text-black hover:bg-white hover:border-black"
+                  className="flex items-center gap-2 bg-black text-white p-2.5 px-6 text-lg rounded-lg font-semibold border-2 border-solid border-transparent hover:text-black hover:bg-white hover:border-black dark:bg-white dark:text-black hover:dark:border-white hover:dark:bg-black hover:dark:text-white"
                   download={true}
                 >
                   Resume <AiOutlineLink />
@@ -50,7 +50,7 @@ export default function home() {
                 <Link
                   href="mailto:afandimboizz@gmail.com"
                   target={"_blank"}
-                  className="text-lg font-medium underline capitalize text-black"
+                  className="text-lg font-medium underline capitalize "
                 >
                   Contact Me
                 </Link>

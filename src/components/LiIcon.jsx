@@ -7,7 +7,7 @@ const LiIcon = ({ reference }) => {
     offset: ["center end", "center center"],
   });
   return (
-    <figure className="absolute left-0 stroke-black">
+    <figure className="absolute left-0 stroke-black dark:stroke-white">
       <svg
         className="-rotate-90"
         id="progress"
@@ -25,7 +25,7 @@ const LiIcon = ({ reference }) => {
           cx="50"
           cy="50"
           r="20"
-          className="stroke-[5px] fill-white"
+          className="stroke-[5px] fill-white dark:fill-black"
           style={{ pathLength: scrollYProgress }}
         />
         <circle

@@ -10,7 +10,9 @@ const myFont = localFont({
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <main className={`${myFont.className} w-full min-h-screen`}>
+      <main
+        className={`${myFont.className} w-full min-h-screen bg-white dark:bg-black`}
+      >
         <Navbar />
         <Component {...pageProps} />
         <Footer />

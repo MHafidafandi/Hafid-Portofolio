@@ -16,7 +16,7 @@ const Details = ({ type, time, place, info }) => {
         transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl">{type}</h3>
-        <span className="capitalize font-medium text-black/75">
+        <span className="capitalize font-medium text-black/75 dark:text-white/75">
           {time} | {place}
         </span>
         <p className="w-full font-medium ">{info}</p>
@@ -37,7 +37,7 @@ const Education = () => {
 
       <div ref={ref} className="w-[75%] mx-auto relative ">
         <motion.div
-          className="absolute left-9 top-0 w-[4px] h-full bg-black origin-top"
+          className="absolute left-9 top-0 w-[4px] h-full bg-black origin-top dark:bg-white"
           style={{ scaleY: scrollYProgress }}
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">

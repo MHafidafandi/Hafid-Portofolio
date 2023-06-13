@@ -13,8 +13,8 @@ const FramerImage = motion(Image);
 
 const FeturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full relative flex justify-between items-center gap-10 rounded-3xl border border-solid border-black bg-white shadow-2xl overflow-hidden p-12 ">
-      <div className="absolute -z-10 top-10 -right-3 w-[101%] h-[103%] rounded-[2.5rem] bg-black" />
+    <article className="w-full relative flex justify-between items-center gap-10 rounded-3xl border border-solid border-black bg-white shadow-2xl p-12 dark:bg-black dark:border-white  dark:text-white">
+      <div className="absolute -z-10 top-0 -right-3 w-[101%] h-[103%] rounded-[2.5rem] bg-black dark:bg-white" />
       <Link
         href={link}
         target="_blank"
@@ -37,7 +37,7 @@ const FeturedProject = ({ type, title, summary, img, link, github }) => {
         >
           <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
         </Link>
-        <p className="my-2 font-medium text-black">{summary}</p>
+        <p className="my-2 font-medium text-black dark:text-white">{summary}</p>
         <div className="w-full mt-2 flex gap-5 items-center">
           <Link href={github} target="_blank" className="text-[40px]">
             <AiFillGithub />
@@ -45,7 +45,7 @@ const FeturedProject = ({ type, title, summary, img, link, github }) => {
           <Link
             href={github}
             target="_blank"
-            className="bg-black rounded-lg text-white py-2 px-6 font-semibold text-lg"
+            className="bg-black rounded-lg text-white py-2 px-6 font-semibold text-lg dark:bg-white dark:text-black"
           >
             Visit Project
           </Link>
@@ -57,8 +57,8 @@ const FeturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ type, title, img, link, github }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center p-6 relative border border-solid border-black rounded-2xl bg-white ">
-      <div className="absolute -z-10 top-0 -right-3 w-[102%] h-[103%] rounded-[2rem] bg-black " />
+    <article className="w-full flex flex-col items-center justify-center p-6 relative border border-solid border-black rounded-2xl bg-white dark:bg-black dark:border-white dark:text-white">
+      <div className="absolute -z-10 top-0 -right-3 w-[102%] h-[103%] rounded-[2rem] bg-black dark:bg-white " />
       <Link
         href={link}
         target="_blank"
@@ -85,11 +85,15 @@ const Project = ({ type, title, img, link, github }) => {
           <Link
             href={github}
             target="_blank"
-            className="text-black underline text-lg font-semibold"
+            className="text-black underline text-lg font-semibold dark:text-white"
           >
             Visit
           </Link>
-          <Link href={github} target="_blank" className="text-[35px]">
+          <Link
+            href={github}
+            target="_blank"
+            className="text-[35px]  dark:text-white"
+          >
             <AiFillGithub />
           </Link>
         </div>

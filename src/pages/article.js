@@ -50,8 +50,8 @@ const MovingImage = ({ title, img, link }) => {
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="col-span-1 w-full p-4 bg-white border border-black rounded-2xl relative">
-      <div className="absolute -z-10 top-0 -right-3 w-[101%] h-[103%] rounded-[2rem] bg-black rounded-br-3xl" />
+    <li className="col-span-1 w-full p-4 bg-white border border-black rounded-2xl relative  dark:text-white dark:bg-black dark:border-white">
+      <div className="absolute -z-10 top-0 -right-3 w-[101%] h-[103%] rounded-[2rem] bg-black rounded-br-3xl dark:bg-white" />
 
       <Link
         href={link}
@@ -81,7 +81,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
 const Article = ({ img, title, date, link }) => {
   return (
     <motion.li
-      className="relative w-full px-4 py-6 my-4 rounded-xl bg-white border border-solid border-black flex items-center justify-between text-black first:mt-0 border-r-4 border-b-4"
+      className="relative w-full px-4 py-6 my-4 rounded-xl bg-white border border-solid border-black flex items-center justify-between text-black first:mt-0 border-r-4 border-b-4  dark:text-white dark:bg-black dark:border-white"
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
