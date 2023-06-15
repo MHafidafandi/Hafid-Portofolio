@@ -8,9 +8,10 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import { BsFillMoonStarsFill, BsSun } from "react-icons/bs";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import useThemeSwitcher from "@/hooks/useThemeSwitcher";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { NavbarContext } from "@/Context/NavbarContext";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -53,10 +54,11 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 };
 export default function Navbar() {
   const [mode, setMode] = useThemeSwitcher();
-  const [isOpen, setIsOpen] = useState(false);
+  const { isInvisible } = useContext(NavbarContext);
+  const { toggleNavbarInvisible } = useContext(NavbarContext);
 
   const handleClick = () => {
-    setIsOpen(!isOpen);
+    toggleNavbarInvisible();
   };
 
   return (
@@ -67,17 +69,17 @@ export default function Navbar() {
       >
         <span
           className={`bg-black dark:bg-white block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
-            isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+            isInvisible ? "-translate-y-0.5" : "rotate-45 translate-y-1"
           }`}
         ></span>
         <span
           className={`bg-black dark:bg-white block h-0.5 w-6 rounded-sm my-0.5 transition-all duration-300 ease-out ${
-            isOpen ? "opacity-0" : "opacity-100"
+            isInvisible ? "opacity-100" : "opacity-0"
           }`}
         ></span>
         <span
           className={`bg-black dark:bg-white block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
-            isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+            isInvisible ? "translate-y-0.5" : "-rotate-45 -translate-y-1"
           }`}
         ></span>
       </button>
@@ -133,9 +135,11 @@ export default function Navbar() {
         </nav>
       </div>
 
-      {isOpen ? (
+      {!isInvisible ? (
         <motion.div
-          className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 bg-black/90 dark:bg-white/75 rounded-lg backdrop-blur-md py-20 text-white dark:text-black "
+          className={`min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 bg-black/90 dark:bg-white/75 rounded-lg backdrop-blur-md py-20 text-white dark:text-black ${
+            isInvisible ? "hidden" : ""
+          }`}
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1, transition: { duration: 0.2 } }}
         >

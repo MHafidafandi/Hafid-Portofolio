@@ -8,6 +8,7 @@ import { AiOutlineLink } from "react-icons/ai";
 import HireMe from "@/components/HireMe";
 import codelogo from "../../public/codelogo.png";
 import TransitionEffect from "@/components/TransitionEffect";
+import useThemeSwitcher from "@/hooks/useThemeSwitcher";
 
 export default function home() {
   return (

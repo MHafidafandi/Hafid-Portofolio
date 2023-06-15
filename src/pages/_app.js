@@ -1,3 +1,4 @@
+import { NavbarProvider } from "@/Context/NavbarContext";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
@@ -16,11 +17,13 @@ export default function App({ Component, pageProps }) {
       <main
         className={`${myFont.className} w-full min-h-screen bg-white dark:bg-black`}
       >
-        <Navbar />
-        <AnimatePresence mode="wait">
-          <Component key={router.asPath} {...pageProps} />
-        </AnimatePresence>
-        <Footer />
+        <NavbarProvider>
+          <Navbar />
+          <AnimatePresence mode="wait">
+            <Component key={router.asPath} {...pageProps} />
+          </AnimatePresence>
+          <Footer />
+        </NavbarProvider>
       </main>
     </>
   );
