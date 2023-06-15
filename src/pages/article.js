@@ -83,13 +83,13 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
 const Article = ({ img, title, date, link }) => {
   return (
     <motion.li
-      className="relative w-full px-4 py-6 my-4 rounded-xl bg-white border border-solid border-black flex items-center justify-between text-black first:mt-0 border-r-4 border-b-4  dark:text-white dark:bg-black dark:border-white sm:flex-col "
+      className="relative w-full px-4 py-6 my-4 rounded-xl bg-white border border-solid border-black flex items-center justify-between text-black first:mt-0 border-r-4 border-b-4  dark:text-white dark:bg-black dark:border-white sm:flex-col sm:items-start "
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
     >
       <MovingImage title={title} img={img} link={link} />
-      <span className="text-orange-500 font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm">
+      <span className="text-orange-500 font-semibold pl-4 sm:pl-0 xs:text-sm">
         {date}
       </span>
     </motion.li>

@@ -166,7 +166,7 @@ export default function Navbar() {
             />
           </nav>
 
-          <nav className="flex items-center gap-7 text-3xl sm:gap-1 md:text-3xl xs:text-2xl">
+          <nav className="flex items-center gap-7 text-3xl sm:gap-5 md:text-3xl xs:text-2xl ">
             <motion.a
               href=""
               target="_blank"
