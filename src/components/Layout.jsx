@@ -3,10 +3,10 @@ import React, { useContext } from "react";
 
 const Layout = ({ children, className = "" }) => {
   const { isInvisible } = useContext(NavbarContext);
-  const { toggleNavbarInvisible } = useContext(NavbarContext);
+  const { noActiveNavbarInvisible } = useContext(NavbarContext);
 
   const handleVisible = () => {
-    toggleNavbarInvisible();
+    noActiveNavbarInvisible();
   };
   return (
     <div

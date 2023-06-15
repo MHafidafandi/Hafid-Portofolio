@@ -8,6 +8,9 @@ export const NavbarProvider = ({ children }) => {
   const toggleNavbarInvisible = () => {
     setIsInvisible(!isInvisible);
   };
+  const noActiveNavbarInvisible = () => {
+    setIsInvisible(true);
+  };
   useEffect(() => {
     const handleScroll = () => {
       setIsInvisible(true);
@@ -21,7 +24,9 @@ export const NavbarProvider = ({ children }) => {
   }, []);
 
   return (
-    <NavbarContext.Provider value={{ isInvisible, toggleNavbarInvisible }}>
+    <NavbarContext.Provider
+      value={{ isInvisible, toggleNavbarInvisible, noActiveNavbarInvisible }}
+    >
       {children}
     </NavbarContext.Provider>
   );
