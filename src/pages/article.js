@@ -31,7 +31,7 @@ const MovingImage = ({ title, img, link }) => {
       onMouseMove={handleMouse}
       onMouseLeave={handleMouseLeave}
     >
-      <h2 className="capitalize text-xl font-semibold hover:underline">
+      <h2 className="capitalize text-xl font-semibold hover:underline xs:text-lg">
         {title}
       </h2>
       <FramerImage
@@ -41,7 +41,7 @@ const MovingImage = ({ title, img, link }) => {
         alt={title}
         priority
         sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw,50vw"
-        className="w-96 h-auto hidden absolute rounded-lg z-10"
+        className="w-96 h-auto hidden absolute rounded-lg z-10 md:!hidden"
         whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
         initial={{ opacity: 0 }}
       />
@@ -69,7 +69,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
         />
       </Link>
       <Link href={link}>
-        <h2 className="capitalize text-2xl font-bold my-2 hover:underline mt-4">
+        <h2 className="capitalize text-2xl font-bold my-2 hover:underline mt-4 xs:text-lg">
           {title}
         </h2>
       </Link>
@@ -82,13 +82,15 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
 const Article = ({ img, title, date, link }) => {
   return (
     <motion.li
-      className="relative w-full px-4 py-6 my-4 rounded-xl bg-white border border-solid border-black flex items-center justify-between text-black first:mt-0 border-r-4 border-b-4  dark:text-white dark:bg-black dark:border-white"
+      className="relative w-full px-4 py-6 my-4 rounded-xl bg-white border border-solid border-black flex items-center justify-between text-black first:mt-0 border-r-4 border-b-4  dark:text-white dark:bg-black dark:border-white sm:flex-col "
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
     >
       <MovingImage title={title} img={img} link={link} />
-      <span className="text-orange-500 font-semibold pl-4 ">{date}</span>
+      <span className="text-orange-500 font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm">
+        {date}
+      </span>
     </motion.li>
   );
 };
@@ -103,16 +105,16 @@ const article = () => {
         <Layout className="pt-16">
           <AnimatedText
             text={"Words Can Change The World!"}
-            className="mb-16 text-center"
+            className="mb-16 text-center lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
 
-          <ul className="grid grid-cols-2 gap-16">
+          <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <FeaturedArticle
               img={article1}
               title={"Hoax News"}
               time={"9 min read"}
               summary={
-                "A recent study conducted by experts at the Future Biomedical Laboratory found that consuming papaya regularly can prevent transmission of the Corona virus. According to researchers, the enzymes contained in papaya have strong antiviral properties and can destroy the Corona virus in the human body. This discovery is expected to be a breakthrough in fighting the current global pandemic. Experts recommend people to increase consumption of papaya to boost immunity and protect themselves from the Corona virus. Previously, papaya has been proven effective in treating various deadly diseases such as cancer and AIDS."
+                "A recent study conducted by experts at the Future Biomedical Laboratory found that consuming papaya regularly can prevent transmission of the Corona virus. According to researchers, the enzymes contained in papaya have strong antiviral properties and can destroy the Corona virus in the human body. "
               }
               link="/"
             />
@@ -121,7 +123,7 @@ const article = () => {
               title={"Hoax News"}
               time={"9 min read"}
               summary={
-                "A recent study conducted by experts at the Future Biomedical Laboratory found that consuming papaya regularly can prevent transmission of the Corona virus. According to researchers, the enzymes contained in papaya have strong antiviral properties and can destroy the Corona virus in the human body. This discovery is expected to be a breakthrough in fighting the current global pandemic. Experts recommend people to increase consumption of papaya to boost immunity and protect themselves from the Corona virus. Previously, papaya has been proven effective in treating various deadly diseases such as cancer and AIDS."
+                "A recent study conducted by experts at the Future Biomedical Laboratory found that consuming papaya regularly can prevent transmission of the Corona virus. According to researchers, the enzymes contained in papaya have strong antiviral properties and can destroy the Corona virus in the human body."
               }
               link="/"
             />

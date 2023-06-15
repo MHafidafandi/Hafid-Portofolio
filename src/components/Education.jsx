@@ -7,7 +7,7 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col justify-between items-center"
+      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col justify-between items-center md:w-[80%]"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -15,11 +15,13 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl">{type}</h3>
-        <span className="capitalize font-medium text-black/75 dark:text-white/75">
+        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
+          {type}
+        </h3>
+        <span className="capitalize font-medium text-black/75 dark:text-white/75 xs:text-sm ">
           {time} | {place}
         </span>
-        <p className="w-full font-medium ">{info}</p>
+        <p className="w-full font-medium md:text-sm ">{info}</p>
       </motion.div>
     </li>
   );
@@ -33,14 +35,16 @@ const Education = () => {
   });
   return (
     <div className="my-64">
-      <h2 className="font-bold text-center text-8xl w-full mb-32">Education</h2>
+      <h2 className="font-bold text-center text-8xl w-full mb-32 md:text-6xl xs:text-4xl md:mb-16">
+        Education
+      </h2>
 
-      <div ref={ref} className="w-[75%] mx-auto relative ">
+      <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
         <motion.div
-          className="absolute left-9 top-0 w-[4px] h-full bg-black origin-top dark:bg-white"
+          className="absolute left-9 top-0 w-[4px] h-full bg-black origin-top dark:bg-white md:w-[2px] md:left-[30px] xs:left-[20px]"
           style={{ scaleY: scrollYProgress }}
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
             type="elementary school"
             time="2010-2016"

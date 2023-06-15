@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t-2 border-solid border-black font-medium text-lg dark:text-white dark:border-white">
-      <Layout className=" py-8 flex justify-between items-center ">
+    <footer className="w-full border-t-2 border-solid border-black font-medium text-lg dark:text-white dark:border-white sm:text-base">
+      <Layout className=" py-8 flex justify-between items-center md:gap-2 md:flex-col ">
         <span>
           Mhafidafandi {new Date().getFullYear()} &copy; All Rights Reserved.
         </span>
