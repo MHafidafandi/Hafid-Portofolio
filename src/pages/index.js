@@ -63,7 +63,7 @@ export default function home() {
           </div>
         </Layout>
         <HireMe />
-        <div className="absolute right-8 bottom-6 inline-block w-60 grayscale overflow-hidden hover:grayscale-0 transtion-[width] ease duration-300 md:hidden">
+        <div className="absolute right-8 bottom-0 inline-block w-60 grayscale overflow-hidden hover:grayscale-0 transtion-[width] ease duration-300 md:hidden">
           <Image src={codelogo} alt="" className="w-full h-auto" />
         </div>
       </main>
