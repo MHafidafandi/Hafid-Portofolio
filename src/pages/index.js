@@ -7,6 +7,7 @@ import Link from "next/link";
 import { AiOutlineLink } from "react-icons/ai";
 import HireMe from "@/components/HireMe";
 import codelogo from "../../public/codelogo.png";
+import TransitionEffect from "@/components/TransitionEffect";
 
 export default function home() {
   return (
@@ -14,6 +15,7 @@ export default function home() {
       <Head>
         <title>Portofolio</title>
       </Head>
+      <TransitionEffect />
       <main className="flex items-center min-h-screen w-full dark:text-white">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex justify-between items-center w-full lg:flex-col">

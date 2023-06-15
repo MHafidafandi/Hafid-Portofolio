@@ -6,6 +6,7 @@ import Link from "next/link";
 import React, { useRef } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import article1 from "../../public/article1.png";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 const MovingImage = ({ title, img, link }) => {
@@ -101,6 +102,7 @@ const article = () => {
       <Head>
         <title>Articles</title>
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col justify-center items-center">
         <Layout className="pt-16">
           <AnimatedText

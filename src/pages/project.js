@@ -8,6 +8,7 @@ import { AiFillGithub } from "react-icons/ai";
 import feturedProject from "../../public/featuredProject.jpg";
 import { motion } from "framer-motion";
 import project1 from "../../public/portofolioTailwind.png";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
@@ -122,6 +123,7 @@ const project = () => {
       <Head>
         <title>Project</title>
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
           <AnimatedText
