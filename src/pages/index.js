@@ -35,7 +35,7 @@ export default function home() {
                 }
                 className="!text-5xl !text-left xl:!text-4xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-2xl"
               />
-              <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
+              <p className="my-4 text-base font-medium md:text-sm sm:text-xs z-10">
                 Saya adalah seorang mahasiswa dan Backend Web Developer. Saya
                 bertanggung jawab mengembangkan dan menjaga bagian belakang
                 sebuah website. Saya menggunakan bahasa pemrograman seperti
@@ -61,11 +61,11 @@ export default function home() {
               </div>
             </div>
           </div>
+          <div className="absolute right-8 bottom-0 inline-block w-60 grayscale overflow-hidden hover:grayscale-0 transtion-[width] ease duration-300 md:hidden z-0">
+            <Image src={codelogo} alt="" className="w-full h-auto" />
+          </div>
         </Layout>
         <HireMe />
-        <div className="absolute right-8 bottom-0 inline-block w-60 grayscale overflow-hidden hover:grayscale-0 transtion-[width] ease duration-300 md:hidden">
-          <Image src={codelogo} alt="" className="w-full h-auto" />
-        </div>
       </main>
     </>
   );
