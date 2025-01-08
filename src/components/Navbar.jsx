@@ -1,26 +1,21 @@
-import Link from "next/link";
-import Logo from "./Logo";
-import { useRouter } from "next/router";
-import {
-  AiFillGithub,
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiFillTwitterCircle,
-} from "react-icons/ai";
-import { BsFillMoonStarsFill, BsSun } from "react-icons/bs";
-import { motion } from "framer-motion";
-import useThemeSwitcher from "@/hooks/useThemeSwitcher";
-import { useContext, useState } from "react";
-import { NavbarContext } from "@/Context/NavbarContext";
+import Link from 'next/link';
+import Logo from './Logo';
+import { useRouter } from 'next/router';
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
+import { BsFillMoonStarsFill, BsSun } from 'react-icons/bs';
+import { motion } from 'framer-motion';
+import useThemeSwitcher from '@/hooks/useThemeSwitcher';
+import { useContext, useState } from 'react';
+import { NavbarContext } from '@/Context/NavbarContext';
 
-const CustomLink = ({ href, title, className = "" }) => {
+const CustomLink = ({ href, title, className = '' }) => {
   const router = useRouter();
   return (
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
         className={`h-[1px] inline-block bg-black absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-white ${
-          router.asPath === href ? "w-full" : "w-0"
+          router.asPath === href ? 'w-full' : 'w-0'
         }`}
       >
         &nbsp;
@@ -29,7 +24,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   );
 };
 
-const CustomMobileLink = ({ href, title, className = "", toggle }) => {
+const CustomMobileLink = ({ href, title, className = '', toggle }) => {
   const router = useRouter();
   const handleClick = () => {
     toggle();
@@ -44,7 +39,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
       {title}
       <span
         className={`h-[1px] inline-block bg-white absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-black ${
-          router.asPath === href ? "w-full" : "w-0"
+          router.asPath === href ? 'w-full' : 'w-0'
         }`}
       >
         &nbsp;
@@ -63,23 +58,20 @@ export default function Navbar() {
 
   return (
     <header className="w-full px-32 py-8 font-medium flex justify-between items-center dark:text-white relative z-10 lg:px-16 md:px-12 sm:p-8">
-      <button
-        className="justify-center flex-col items-center hidden lg:flex"
-        onClick={handleClick}
-      >
+      <button className="justify-center flex-col items-center hidden lg:flex" onClick={handleClick}>
         <span
           className={`bg-black dark:bg-white block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
-            isInvisible ? "-translate-y-0.5" : "rotate-45 translate-y-1"
+            isInvisible ? '-translate-y-0.5' : 'rotate-45 translate-y-1'
           }`}
         ></span>
         <span
           className={`bg-black dark:bg-white block h-0.5 w-6 rounded-sm my-0.5 transition-all duration-300 ease-out ${
-            isInvisible ? "opacity-100" : "opacity-0"
+            isInvisible ? 'opacity-100' : 'opacity-0'
           }`}
         ></span>
         <span
           className={`bg-black dark:bg-white block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
-            isInvisible ? "translate-y-0.5" : "-rotate-45 -translate-y-1"
+            isInvisible ? 'translate-y-0.5' : '-rotate-45 -translate-y-1'
           }`}
         ></span>
       </button>
@@ -93,12 +85,7 @@ export default function Navbar() {
         </nav>
 
         <nav className="flex items-center gap-7 text-3xl">
-          <motion.a
-            href=""
-            target="_blank"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-          >
+          <motion.a href="" target="_blank" whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}>
             <AiFillTwitterCircle />
           </motion.a>
           <motion.a
@@ -110,7 +97,7 @@ export default function Navbar() {
             <AiFillGithub />
           </motion.a>
           <motion.a
-            href="https://www.linkedin.com/in/m-hafid-afandi-23b725245/"
+            href="https://www.linkedin.com/in/muhammad-hafid-afandi-23b725245/"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -128,9 +115,9 @@ export default function Navbar() {
           <motion.button
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            onClick={() => setMode(mode === "dark" ? "light" : "dark")}
+            onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
           >
-            {mode === "dark" ? <BsSun /> : <BsFillMoonStarsFill />}
+            {mode === 'dark' ? <BsSun /> : <BsFillMoonStarsFill />}
           </motion.button>
         </nav>
       </div>
@@ -138,45 +125,20 @@ export default function Navbar() {
       {!isInvisible ? (
         <motion.div
           className={`min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 bg-black/90 dark:bg-white/75 rounded-lg backdrop-blur-md py-20 text-white dark:text-black ${
-            isInvisible ? "hidden" : ""
+            isInvisible ? 'hidden' : ''
           }`}
-          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+          initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }}
           animate={{ scale: 1, opacity: 1, transition: { duration: 0.2 } }}
         >
           <nav className="flex flex-col items-center justify-center mb-5 gap-4">
-            <CustomMobileLink
-              href="/"
-              className=""
-              title="Home"
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/about"
-              className=""
-              title="About"
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/project"
-              className=""
-              title="Project"
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/article"
-              className=""
-              title="Article"
-              toggle={handleClick}
-            />
+            <CustomMobileLink href="/" className="" title="Home" toggle={handleClick} />
+            <CustomMobileLink href="/about" className="" title="About" toggle={handleClick} />
+            <CustomMobileLink href="/project" className="" title="Project" toggle={handleClick} />
+            <CustomMobileLink href="/article" className="" title="Article" toggle={handleClick} />
           </nav>
 
           <nav className="flex items-center gap-7 text-3xl sm:gap-5 md:text-3xl xs:text-2xl ">
-            <motion.a
-              href=""
-              target="_blank"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
+            <motion.a href="" target="_blank" whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}>
               <AiFillTwitterCircle />
             </motion.a>
             <motion.a
@@ -206,9 +168,9 @@ export default function Navbar() {
             <motion.button
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => setMode(mode === "dark" ? "light" : "dark")}
+              onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
             >
-              {mode === "dark" ? <BsSun /> : <BsFillMoonStarsFill />}
+              {mode === 'dark' ? <BsSun /> : <BsFillMoonStarsFill />}
             </motion.button>
           </nav>
         </motion.div>
