@@ -42,7 +42,7 @@ export default function home() {
               </p>
               <div className="flex items-center self-start gap-5 lg:self-center">
                 <Link
-                  href={'/CV Hafid.pdf'}
+                  href={'/CV Muhammad Hafid Afandi.pdf'}
                   target={'_blank'}
                   className="flex items-center gap-2 bg-black text-white p-2.5 px-6 text-lg rounded-lg font-semibold border-2 border-solid border-transparent hover:text-black hover:bg-white hover:border-black dark:bg-white dark:text-black hover:dark:border-white hover:dark:bg-black hover:dark:text-white md:p-2 md:px-4 md:text-base"
                   download={true}
