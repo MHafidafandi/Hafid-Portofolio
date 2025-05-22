@@ -10,6 +10,12 @@ import { motion } from 'framer-motion';
 import project1 from '../../public/portofolioTailwind.png';
 import ecomate from '../../public/ecomate.png';
 import exni from '../../public/exni.png';
+import forumapi from '../../public/forumapi.png';
+import shortlink from '../../public/shortlink.png';
+import palmvein from '../../public/palmvein.png';
+import todolist from '../../public/todolist.png';
+import weatherapp from '../../public/weatherapp.png';
+import bookingapp from '../../public/bookingapp.png';
 import TransitionEffect from '@/components/TransitionEffect';
 
 const FramerImage = motion(Image);
@@ -150,6 +156,60 @@ const project = () => {
                 img={project1}
                 link={''}
                 github={'https://github.com/MHafidafandi/Portofolio-Tailwind'}
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Backend API"
+                title="Forum Api Submition Dicoding"
+                img={forumapi}
+                link={''}
+                github={'https://github.com/MHafidafandi/forumapi.git'}
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Image Processing"
+                title="Deteksi pembuluh darah vena"
+                img={palmvein}
+                link={''}
+                github={'https://github.com/MHafidafandi/Palm-vein-detection.git'}
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Consume public API"
+                title="Weather App"
+                img={weatherapp}
+                link={''}
+                github={'https://github.com/MHafidafandi/good-weather-dashboard.git'}
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="shortlink zseev"
+                title="shortlink app"
+                img={shortlink}
+                link={''}
+                github={'https://github.com/MHafidafandi/short_link.git'}
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="booking app"
+                title="booking app"
+                img={bookingapp}
+                link={''}
+                github={'https://github.com/MHafidafandi/booking_app.git'}
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="todo list app"
+                title="todo list app"
+                img={todolist}
+                link={''}
+                github={'https://github.com/MHafidafandi/Todo-App-MERN.git'}
               />
             </div>
           </div>

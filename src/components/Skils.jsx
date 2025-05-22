@@ -40,6 +40,11 @@ const Skils = () => {
         <Skill name="Tailwind CSS" x="-35vw" y="10vw" />
         <Skill name="Bootstrap" x="18vw" y="15vw" />
         <Skill name="Github" x="-28vw" y="-10vw" />
+        <Skill name="Golang" x="-15vw" y="-13vw" />
+        <Skill name="Jenkins" x="10vw" y="10vw" />
+        <Skill name="Docker" x="-28vw" y="16vw" />
+        <Skill name="Cloud Computing" x="30vw" y="16vw" />
+        <Skill name="CI/CD" x="20vw" y="-10vw" />
       </div>
     </>
   );

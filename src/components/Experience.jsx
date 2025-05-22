@@ -61,12 +61,36 @@ const Experience = () => {
             word="work with the team to fix network problems and expand the company's internet network, also do internet package marketing and also do administrative work"
           />
           <Details
-            position="Web Programmer"
-            company="Kang IT"
-            companyLink="https://kangIT.com"
-            time="present"
-            address=" Mojosari - Mojokerto"
-            word="Work with the team to receive orders for making applications or webs with a modern and beautiful appearance"
+            position="Golang Mastery For Greentech Backend Independent study"
+            company="PT.Marka Kreasi Persada (Alterra Academy)"
+            companyLink="https://www.alterra.id/tech-academy/"
+            time="Septemmber - Desember 2024"
+            address="Remote"
+            word="Learn how to make rest api with golang,learn soft skills needed in the industry, learn green economy and energy efficiency in the field of technology."
+          />
+          <Details
+            position="Backend Developer Project Base Intern"
+            company="PT.PELNI (Persero) HQ"
+            companyLink="https://www.pelni.co.id/"
+            time="Oktober - Desember 2024"
+            address="Surabaya-Indonesia "
+            word="Collaborated on the development of an asset rental application, Designed and implemented REST APIs using node.js for efficient backend operations, Applied MVC architecture and integrated database solutions for data management."
+          />
+          <Details
+            position="Devops Engginer Inter"
+            company="PT.Rantangin Indonesia"
+            companyLink="https://www.rantangin.com/"
+            time="Januari - April 2025"
+            address="Remote"
+            word="Streamlined CI/CD pipelines to reduce deployment time, automated infrastructure provisioning to enhance scalability and efficiency, developed scripts for automated testing to boost code quality, and gained hands-on experience with tools like Docker, GitHub Actions, and Jenkins."
+          />
+          <Details
+            position="IT Support Inter"
+            company="PT. Kimia Farma Tbk. Plant Watudakon"
+            companyLink="https://www.kimiafarma.co.id/"
+            time="Februari - Juni 2025"
+            address="Jombang - Indonesia"
+            word="Proficient in diagnosing and repairing issues with computer devices, printers, networks, and general software (Windows, Microsoft Office, etc.), providing both in-person and remote technical assistance for software installation, system configuration, and troubleshooting, as well as managing and repairing LAN and Wi-Fi connectivity and configuring network devices such as routers and switches."
           />
         </ul>
       </div>
